@@ -3,6 +3,22 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 ;;
+;;variable header sizes
+(custom-theme-set-faces!
+  'user
+  '(org-level-8 :inherit outline-3 :height 1.0)
+  '(org-level-7 :inherit outline-3 :height 1.0)
+  '(org-level-6 :inherit outline-3 :height 1.1)
+  '(org-level-5 :inherit outline-3 :height 1.2)
+  '(org-level-4 :inherit outline-3 :height 1.3)
+  '(org-level-3 :inherit outline-3 :height 1.4)
+  '(org-level-2 :inherit outline-2 :height 1.5)
+  '(org-level-1 :inherit outline-1 :height 1.6)
+  '(org-document-title :height 1.8 :weight bold))
+;;
+;;folded trees and subtrees on startup
+(after! org
+  (setq org-startup-folded 'overview))
 ;;
 ;;Python black for code formatting
 (after! python
@@ -28,6 +44,7 @@
   (setq org-superstar-headline-bullets-list '("⏣" "◉" "○" "◇" "➤"))
   (setq org-superstar-remove-leading-stars t)
   (add-hook 'org-mode-hook #'org-superstar-mode))
+
 
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
@@ -58,7 +75,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-ir-black)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
